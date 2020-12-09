@@ -68,7 +68,7 @@ while (victoire == False and tour < 9):                                 #Conditi
     tour += 1
 
     
-if (tour >=9):                                                      #Après la 8ème tentative, le jeu s'arrète.
+if (tour =9):                                                      #Après la 8ème tentative, le jeu s'arrète.
     print ("Désolé, c'est perdu !")
 if (victoire == True):                                              #Si la condition victoire prend la valeur True, la partie est gagnée
     print ("Félicitation, vous avez gagné !")
