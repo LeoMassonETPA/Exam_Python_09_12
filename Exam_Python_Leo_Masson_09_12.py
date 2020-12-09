@@ -8,7 +8,7 @@ liste_mot = ["hideux", "picole", "crayon", "fusain", "paumes", "charge", "tisser
 mot_alea = random.choices(liste_mot)  
 mot_mystere =(mot_alea[0])                                                                                             # <-- Aucune idée de pourquoi cette ligne résoud mon problème ça marche mais ça marche ! 
 
-print (mot_mystere)
+print ("Bienvenue sur ce jeu de Motus !")
 
 
 victoire = False
@@ -59,12 +59,16 @@ while (victoire == False or tour < 9):
     elif(proposition[5] == mot_mystere[0] or proposition[5] == mot_mystere[1] or proposition[5] == mot_mystere[2] or proposition[5] == mot_mystere[3] or proposition[5] == mot_mystere[4]):
         print (Fore.YELLOW + proposition[5], end=" ")
     else:
-        print (Fore.BLUE + proposition[5], end=" ")       # Cette suite de condition if, elif et else marche toute seule (j'ai réussi a lancer le programme en python et il marche), en revanche quand je l'insère dans une boucle, ça coince
+        print (Fore.BLUE + proposition[5], end=" ")
     
     print(Style.RESET_ALL)
-    
-    if (proposition == mot_mystere):
-        victoire = True
     tour += 1
+    
+if (proposition == mot_mystere):
+victoire = True
+print ("Félicitation, vous avez gagné !)
+if tour >= 9
+print ("Désolé, c'est perdu !")
+    
 
 input ()
