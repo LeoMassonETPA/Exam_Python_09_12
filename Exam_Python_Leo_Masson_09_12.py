@@ -15,7 +15,7 @@ victoire = False
 tour = 0
 
 
-while (victoire = False or tour < 9):
+while (victoire == False or tour < 9):
 
     proposition = input ("Votre proposition ?(6 lettres max)")
 
@@ -59,8 +59,10 @@ while (victoire = False or tour < 9):
     elif(proposition[5] == mot_mystere[0] or proposition[5] == mot_mystere[1] or proposition[5] == mot_mystere[2] or proposition[5] == mot_mystere[3] or proposition[5] == mot_mystere[4]):
         print (Fore.YELLOW + proposition[5], end=" ")
     else:
-        print (Fore.BLUE + proposition[5], end=" ")
-        
+        print (Fore.BLUE + proposition[5], end=" ")       # Cette suite de condition if, elif et else marche toute seule (j'ai réussi a lancer le programme en python et il marche), en revanche quand je l'insère dans une boucle, ça coince
+    
+    print(Style.RESET_ALL)
+    
     if (proposition == mot_mystere):
         victoire = True
     tour += 1
