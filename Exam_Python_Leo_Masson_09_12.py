@@ -6,7 +6,7 @@ import random
 
 liste_mot = ["hideux", "picole", "crayon", "fusain", "paumes", "charge", "tisser", "whisky", "chlore", "poulet"]       #Sélection aléatoire du mot
 mot_alea = random.choices(liste_mot)  
-mot_mystere =(mot_alea[0])                                                                                             # <-- Aucune idée de pourquoi cette ligne résoud mon problème ça marche mais ça marche ! 
+mot_mystere =(mot_alea[0])
 
 print ("Bienvenue sur ce jeu de Motus !")
 
@@ -61,14 +61,13 @@ while (victoire == False or tour < 9):
     else:
         print (Fore.BLUE + proposition[5], end=" ")
     
-    print(Style.RESET_ALL)
+    if (proposition == mot_mystere):
+        victoire = True
     tour += 1
+    print(Style.RESET_ALL)
     
-if (proposition == mot_mystere):
-victoire = True
-print ("Félicitation, vous avez gagné !)
-if tour >= 9
-print ("Désolé, c'est perdu !")
+
+
     
 
 input ()
