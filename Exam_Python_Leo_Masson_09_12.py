@@ -12,13 +12,13 @@ print ("Bienvenue sur ce jeu de Motus !")
 
 
 victoire = False
-tour = 0
+tour = 1
 
 
 while (victoire == False or tour < 9):
 
     proposition = input ("Votre proposition ?(6 lettres max)")
-
+    
     if(proposition[0] == mot_mystere[0]):
         print (Fore.RED + proposition[0], end=" ")
     elif(proposition[0] == mot_mystere[1] or proposition[0] == mot_mystere[2] or proposition[0] == mot_mystere[3] or proposition[0] == mot_mystere[4] or proposition[0] == mot_mystere[5]):
@@ -61,13 +61,16 @@ while (victoire == False or tour < 9):
     else:
         print (Fore.BLUE + proposition[5], end=" ")
     
-    if (proposition == mot_mystere):
+    print(Style.RESET_ALL)
+        
+    if (proposition[0] == mot_mystere[0] and proposition[1] == mot_mystere[1] and proposition[2] == mot_mystere[2] and proposition[3] == mot_mystere[3] and proposition[4] == mot_mystere[4] and proposition[5] == mot_mystere[5]):               
         victoire = True
     tour += 1
-    print(Style.RESET_ALL)
-    
-
 
     
-
+if (tour >=9):
+    print ("Désolé, c'est perdu !")
+if (victoire == True):
+    print ("Félicitation, vous avez gagné !")
+    
 input ()
