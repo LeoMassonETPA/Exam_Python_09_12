@@ -6,7 +6,7 @@ import random
 
 liste_mot = ["hideux", "picole", "crayon", "fusain", "paumes", "charge", "tisser", "whisky", "chlore", "poulet"]       #Sélection aléatoire du mot
 mot_alea = random.choices(liste_mot)  
-mot_mystere =(mot_alea[0])
+mot_mystere =(mot_alea[0])                                                                                            
 
 print ("Bienvenue sur ce jeu de Motus !")
 
