@@ -4,8 +4,9 @@ from colorama import Fore, Back, Style
 
 import random
 
-liste_mot = ["hideux", "picole", "crayon", "fusain", "paumes", "charge", "tisser", "whisky", "chlore", "poulet"]
-mot_mystere = random.choices(liste_mot)  
+liste_mot = ["hideux", "picole", "crayon", "fusain", "paumes", "charge", "tisser", "whisky", "chlore", "poulet"]       #Selection aleatoire du mot
+mot_alea = random.choices(liste_mot)  
+mot_mystere =(mot_alea[0])                                                                                             # Aucune idée de pourquoi ça marche 
 
 proposition = input ("Votre proposition ?(6 lettres max)")
 
@@ -15,7 +16,6 @@ proposition = input ("Votre proposition ?(6 lettres max)")
         print (Fore.YELLOW + proposition[0], end=" ")
     else :
         print (Fore.BLUE + proposition[0], end=" ")
-        
-   
-    
+
+
 input ()
