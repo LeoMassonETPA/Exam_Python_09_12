@@ -15,7 +15,7 @@ victoire = False
 tour = 1
 
 
-while (victoire == False or tour < 9):
+while (victoire == False and tour < 9):                                 #Conditions de victoire
 
     proposition = input ("Votre proposition ?(6 lettres max)")
     
@@ -63,14 +63,14 @@ while (victoire == False or tour < 9):
     
     print(Style.RESET_ALL)
         
-    if (proposition[0] == mot_mystere[0] and proposition[1] == mot_mystere[1] and proposition[2] == mot_mystere[2] and proposition[3] == mot_mystere[3] and proposition[4] == mot_mystere[4] and proposition[5] == mot_mystere[5]):               
+    if (proposition[0] == mot_mystere[0] and proposition[1] == mot_mystere[1] and proposition[2] == mot_mystere[2] and proposition[3] == mot_mystere[3] and proposition[4] == mot_mystere[4] and proposition[5] == mot_mystere[5]):    #Vérification de la condition de victoire           
         victoire = True
     tour += 1
 
     
-if (tour >=9):
+if (tour >=9):                                                      #Après la 8ème tentative, le jeu s'arrète.
     print ("Désolé, c'est perdu !")
-if (victoire == True):
+if (victoire == True):                                              #Si la condition victoire prend la valeur True, la partie est gagnée
     print ("Félicitation, vous avez gagné !")
     
 input ()
