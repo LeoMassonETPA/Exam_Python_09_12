@@ -17,7 +17,7 @@ tour = 1
 
 while (victoire == False and tour < 9):                                 #Conditions de victoire
 
-    proposition = input ("Votre proposition ?(6 lettres max)")
+    proposition = input ("Votre proposition ?(6 lettres max, en minuscules svp !)")
     
     if(proposition[0] == mot_mystere[0]):
         print (Fore.RED + proposition[0], end=" ")
